@@ -8,10 +8,9 @@
 
 import fs from "fs";
 import path from "path";
-import { fileURLToPath } from "url";
 import { config } from "./env.js";
 
-const DATA_DIR = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../../../data");
+const DATA_DIR = path.resolve(__dirname, "../../../data");
 const CFG_FILE = path.join(DATA_DIR, "liveConfig.json");
 
 export interface LiveConfig {
